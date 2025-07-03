@@ -78,6 +78,7 @@ function phptemplate_comment_wrapper($content) {
 }
 
 drupal_add_js(path_to_theme() . '/add_bookmark.js');
+drupal_add_js(path_to_theme() . '/google_analytics.js');
 drupal_add_js('misc/collapse.js');
 
 

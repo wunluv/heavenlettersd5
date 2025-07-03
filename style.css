@@ -1771,6 +1771,27 @@ span.statistics_counter {
     word-wrap: break-word;
 }
 
+.normal {
+clear:both;
+padding:5px 0;
+}
+legend {
+color:#B79715;
+font-size:1.2em;
+}
+.normal select,
+.normal label,
+.normal input {
+float:left;
+font-family:georgia,arial;
+font-size:1.2em;
+width:130px !important;
+}
+.normal input,
+.normal select {
+width:auto;
+margin:0 0 0 5px;
+}
 
 /**
  * Sidebar-left style.

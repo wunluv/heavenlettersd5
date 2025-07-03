@@ -147,6 +147,10 @@ function _phptemplate_variables($hook, $vars = array()) {
       break;
 
     case 'page':
+      if (drupal_is_front_page()) {
+        $vars['frontpage_view'] = view_page_load(2, 2, "frontpage", '', '');
+        $vars['heavenletter_view'] = view_page_load(4, 1, '', 'teaser', 'embed');
+      }
       if (filter_input(INPUT_GET, 'page')) {
         $vars['head'] = str_replace('<meta name="robots" content="index,follow" />',
           '<meta name="robots" content="noindex,follow" />', $vars['head']);

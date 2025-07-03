@@ -128,6 +128,10 @@ function phptemplate_filter_tips($tips, $long = FALSE, $extra = '') {
 function _phptemplate_variables($hook, $vars = array()) {
   switch ($hook) {
     case 'node':
+      if ($vars['node']->type == 'heavenletters') {
+        $alias = drupal_lookup_path('alias', 'node/' . $vars['node']->nid);
+        $vars['permalink'] = l(url($alias, array('absolute' => TRUE)), url($alias, array('absolute' => TRUE)));
+      }
       $ajax = filter_input(INPUT_GET, 'page');
       if ($ajax == 'ajax' || (arg(0) == 'node' && arg(1) == 11846)) {
         $vars['links'] = '';

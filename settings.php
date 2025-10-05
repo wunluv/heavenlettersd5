@@ -54,19 +54,6 @@
   global $conf;
   $conf['install_profile'] = 'default';
   $conf['file_directory_path'] = 'sites/heavenletters.org/files';
-  $conf['file_directory_temp'] = 'sites/heavenletters.org/private/temp';
+  $conf['file_directory_temp'] = 'sites/heavenletters.org/files';
   $conf['clean_url'] = 1;
-  $conf['aegir_api'] = 2;
 
-
-# Extra configuration from modules:
-
-  # Additional host wide configuration settings. Useful for safely specifying configuration settings.
-  if (file_exists('/var/aegir/config/includes/global.inc')) {
-    include_once('/var/aegir/config/includes/global.inc');
-  }
-
-  # Additional site configuration settings.
-  if (file_exists('/var/aegir/platforms/drupal-5.x-dev/sites/heavenletters.org/local.settings.php')) {
-    include_once('/var/aegir/platforms/drupal-5.x-dev/sites/heavenletters.org/local.settings.php');
-  }
